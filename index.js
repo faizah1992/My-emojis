@@ -1,10 +1,12 @@
 const myEmojis = ["👨‍💻", "⛷", "🍲"]
 const emojiContainer = document.getElementById("emoji-container")
 
-for (let i = 0; i < myEmojis.length; i++) {
-    const emoji = document.createElement('span')
-    emoji.textContent = myEmojis[i]
-    emojiContainer.append(emoji)
+function renderEmojis(){
+    for (let i = 0; i < myEmojis.length; i++) {
+        const emoji = document.createElement('span')
+        emoji.textContent = myEmojis[i]
+        emojiContainer.append(emoji)
+    }
 }
 
 const pushBtn = document.getElementById("push-btn")
@@ -13,6 +15,7 @@ pushBtn.addEventListener("click", function(){
     if (emojiInput.value) {
         myEmojis.push(emojiInput.value)
         emojiInput.value = ""
-        console.log(myEmojis)    
+        emojiContainer.innerHTML = ""
+        renderEmojis()
     }
 })
