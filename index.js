@@ -29,3 +29,17 @@ unshiftBtn.addEventListener("click", function(){
         renderEmojis()
     }
 })
+
+const popBtn = document.getElementById("pop-btn")
+popBtn.addEventListener("click", function(){
+    const emojiInput = document.getElementById("emoji-input")
+    myEmojis.pop()
+    renderEmojis()
+})
+
+const shiftBtn = document.getElementById("shift-btn")
+popBtn.addEventListener("click", function(){
+    const emojiInput = document.getElementById("emoji-input")
+        myEmojis.shift()
+        renderEmojis()
+    }
